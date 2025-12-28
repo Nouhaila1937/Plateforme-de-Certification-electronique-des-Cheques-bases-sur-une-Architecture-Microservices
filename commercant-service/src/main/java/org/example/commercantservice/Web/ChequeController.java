@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/cheques")
+@CrossOrigin(origins = "http://localhost:4200")
 public class ChequeController {
 
     private final ChequeService service;

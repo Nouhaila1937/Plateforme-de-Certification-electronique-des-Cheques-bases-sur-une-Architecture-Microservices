@@ -21,6 +21,10 @@ ng serve
 ```bash
 ng generate service services/cheque
 ```
+
+mkdir src/app/models
+
+
  
 ## Etape 1 création de tout les services dès le départ
 
