@@ -15,8 +15,13 @@ ng new frontweb-app
 cd frontweb-app
 ```
 ```bash 
-ng serve --open
+ng serve 
 ```
+## Créer un service Angular pour communiquer avec le backend
+```bash
+ng generate service services/cheque
+```
+ 
 ## Etape 1 création de tout les services dès le départ
 
 ## Etape 2 Développer et tester les micro-services , Discovery-service , Gateway-service et config-service
@@ -44,7 +49,18 @@ ordre de démarrage
 ```
 
 
+on commence par tester
+Accéder à Eureka Dashboard
+![img.png](images/img.png)
 
+insertion fait dans la base de donné
+![img.png](images/img_1.png)
+
+test avec configservice
+![img.png](images/img_2.png)
+
+test avec application gateway
+![img.png](images/img_3.png)
 
 
 
