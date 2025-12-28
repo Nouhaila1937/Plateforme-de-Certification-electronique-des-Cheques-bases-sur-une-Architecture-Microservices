@@ -1,5 +1,5 @@
 # architecture de projet 
-![img_3.png](img_3.png)
+![img_4.png](images/img_4.png)
 
 # pour le frontend on essaie de le créer via la commande :
 
@@ -76,11 +76,40 @@ test avec application gateway
 
 
 
+## on pass au event sourcing il faut comprendre que
+### CQRS = 2 côtés
 
+WRITE: Commands → Events → Event Store
+READ: Events → Projector → Read Model
+CQRS n’est pas un dogme : il est appliqué là où la séparation des responsabilités lecture/écriture apporte une valeur métier, notamment dans les services manipulant des états complexes et des événements critiques.
+### Event Sourcing = Événements
 
+On ne stocke QUE les événements
+Pas d'UPDATE dans la base
+L'état se reconstitue en rejouant les événements
+Chaque changement d’état = événement
 
+Les événements sont :
+persistés (DB simple ou log)
+publiés dans Kafka (event store / audit)
 
+## Flux complet:
+```bash
+Command → Event → Event Store → Kafka → Projector → Read Model
+```
 
+## démarrage kafka :
+```bash
+./kafka-console-producer.sh --bootstrap-server localhost:9092 --topic cheque-events
+./kafka-console-consumer.sh --bootstrap-server localhost:9092 --
+topic cheque-events --from-beginning
 
+/opt/kafka/bin $ ./kafka-topics.sh --list --bootstrap-server localhost:9092
+__consumer_offsets
+cheque-events
+real-time-orders
+
+```
+![](images/img_5.png)
 
 
