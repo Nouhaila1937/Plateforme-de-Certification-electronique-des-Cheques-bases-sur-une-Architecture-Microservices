@@ -32,7 +32,16 @@ return new DiscoveryClientRouteDefinitionLocator(rdc,dlp);
 }
 ```
 
+il faut faire attention dans discovery-service gatway-service et config service la version de gspring doit etre <version>3.5.7</version>
 
+ordre de démarrage 
+```bash
+1. Discovery Service (Eureka)
+2. Config Service
+3. Gateway Service
+4. Microservices métiers
+5. Tests d’intégration et de routage
+```
 
 
 
