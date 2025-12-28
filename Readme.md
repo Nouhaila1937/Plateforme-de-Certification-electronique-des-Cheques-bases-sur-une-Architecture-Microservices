@@ -1,3 +1,6 @@
+# architecture de projet 
+![img_3.png](img_3.png)
+
 # pour le frontend on essaie de le créer via la commande :
 
 ### Angular CLI
@@ -68,7 +71,8 @@ test avec application gateway
 
 
 
-
+![img.png](img.png)
+![img_1.png](img_1.png)
 
 
 
